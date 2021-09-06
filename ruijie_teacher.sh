@@ -2,15 +2,15 @@
 
 #If received parameters is less than 2, print usage
 if [ "${#}" -lt "2" ]; then
-  echo "Usage: ./ruijie_template.sh username password"
-  echo "Example: ./ruijie_template.sh 201620000000 123456"
+  echo "Usage: ./ruijie_teacher.sh username password"
+  echo "Example: ./ruijie_teacher.sh 10000 123456"
   exit 1
 fi
 
 #Exit the script when is already online, use www.google.cn/generate_204 to check the online status
 captiveReturnCode=`curl -s -I -m 10 -o /dev/null -s -w %{http_code} http://www.google.cn/generate_204`
 if [ "${captiveReturnCode}" = "204" ]; then
-  echo "You are already online!"
+  echo "网络连接成功!"
   exit 0
 fi
 
