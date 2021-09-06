@@ -40,5 +40,5 @@ opkg install curl
 ```
 自动任务 每5分钟运行一次
 ```shell
-*/20 * * * * /bin/teacher.sh 10892 140620
+*/5 * * * * /bin/teacher.sh 10892 140620
 ```
