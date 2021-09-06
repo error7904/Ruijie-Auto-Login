@@ -23,8 +23,8 @@ loginPageURL=`curl -s "http://www.google.cn/generate_204" | awk -F \' '{print $2
 loginURL=`echo ${loginPageURL} | awk -F \? '{print $1}'`
 loginURL="${loginURL/index.jsp/InterFace.do?method=login}"
 
-service="DianXin"
-queryString="wlanuserip=94ca20c0fb0e777ea4972aaa297a8f3e&wlanacname=643d07a46528c937f09836d589740409&ssid=&nasip=cc5b64e516a1fa61d915e184b913e171&snmpagentip=&mac=e9610ea931d21016b0af5fed148bfe73&t=wireless-v2&url=418b8bb474ba4db13cc1f6dc4a2e7e2b147e5d21f7c9202b&apmac=&nasid=643d07a46528c937f09836d589740409&vid=e7e9ec1de0977a03&port=2dbe874bc250c5f9&nasportid=489ecc80e9f86aea0ba5dc4a08edd8a223dbed083ee5e03fe78d14a5ae3564de"
+service="default"
+queryString="wlanuserip=b0ca4cc70a0e85576592b062fd3c8eee&wlanacname=18260f9e92a595cf175b8f228a013c28&ssid=a94b524f709e97ce5d5f6888c069bef5&nasip=2a7140b6682505806cff617bac715e9d&mac=3dc484a0996e1f0641f13bcafc288276&t=wireless-v2&url=c9673a58c390d25634642c279f688e0e49d5976c400918ec156e785c53b4c14a9f9f32aa704ac8c6"
 queryString="${queryString//&/%2526}"
 queryString="${queryString//=/%253D}"
 
